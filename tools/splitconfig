@@ -112,7 +112,7 @@ def generate_config(header_lines, items, publication, factor):
     if len(section) == 0:
         print("Generating %s: no items--skipping." % config_file)
         return
-    with open(config_file, 'wb') as header:
+    with open(config_file, 'w') as header:
         header.write(
             "/* Automatically generated from config.h: %s/%s config. */\n"
             % (publication, factor))
